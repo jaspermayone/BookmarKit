@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "BookmarKit",
+    "description": "Add the reading time to Chrome Extension documentation articles",
+    "version": "0.0.1",
+    "author": "apps@singlefeather.com",
+    "icons": {
+        "16": "/images/icon-16.png",
+        "32": "/images/icon-32.png",
+        "48": "/images/icon-48.png",
+        "128": "/images/icon-128.png"
+    },
+    "permissions": [
+        "tabs",
+        "storage",
+        "identity"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Latest Covid Report"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "index.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
