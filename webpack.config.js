@@ -8,7 +8,7 @@ const entryPoints = {
     index: [
         path.resolve(__dirname, 'src', 'index.ts'),
     ],
-    background: path.resolve(__dirname, 'src', 'background.ts')
+    background: path.resolve(__dirname, 'src', 'background.ts'),
 };
 
 module.exports = {

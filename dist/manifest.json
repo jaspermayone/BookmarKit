@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "BookmarKit",
     "description": "Add the reading time to Chrome Extension documentation articles",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "author": "apps@singlefeather.com",
     "icons": {
         "16": "/images/icon-16.png",

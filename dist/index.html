@@ -1,8 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <button id="saveTabs">Save Tabs</button>
-    <button id="retrieveTabs">Retrieve Tabs</button>
-    <script src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- <link rel="icon" href="" /> -->
+  <meta name="apple-mobile-web-app-title" content="BookmarKit">
+  <meta name="application-name" content="BookmarKit">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BookmarKit</title>
+  <meta name="description" content="" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="kits/bulma.min.css" />
+
+  <style>
+    .custom-alert {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    body {
+      background-color: #f8f8f8;
+      /* Light gray background color */
+    }
+
+    .title.is-3,
+    .subtitle.is-6 {
+      color: #333;
+      /* Darker text color */
+    }
+
+    .button {
+      font-size: 1rem;
+      /* Adjust button font size */
+    }
+
+    .button:hover {
+      background-color: #007bff;
+      /* Change button color on hover */
+      color: #fff;
+      /* Change text color on hover */
+    }
+  </style>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title is-3">
+        <i class="fas fa-window-restore mr-2"></i>
+        BookmarKit
+      </h1>
+      <p class="subtitle is-6">
+        <i class="fas fa-user mr-1"></i>
+        By Jasper Mayone
+      </p>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="buttons is-centered">
+            <button id="saveTabs" class="button is-primary">
+              <i class="fas fa-save mr-1"></i>
+              Save Tabs
+            </button>
+            <button id="retrieveTabs" class="button is-info">
+              <i class="fas fa-download mr-1"></i>
+              Retrieve Tabs
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
