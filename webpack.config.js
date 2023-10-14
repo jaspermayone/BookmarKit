@@ -1,6 +1,8 @@
 // webpack.config.js
 const CopyPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
 
 const path = require('path');
 const outputPath = 'dist';
@@ -31,12 +33,31 @@ module.exports = {
                 test: /\.(jpg|jpeg|png|gif|woff|woff2|eot|ttf|svg)$/i,
                 use: 'url-loader?limit=1024'
             }
-        ],
+        ]
     },
     plugins: [
         new CopyPlugin({
-            patterns: [{ from: '.', to: '.', context: 'public' }]
+            patterns: [
+                { from: '.', to: '.', context: 'public' },
+            ]
         }),
         new Dotenv(),
-    ]
+        new webpack.DefinePlugin({
+            version: JSON.stringify(process.env.npm_package_version),
+        }),
+        new webpack.DefinePlugin({
+            __IN_DEBUG__: JSON.stringify(false),
+            __VERSION__: JSON.stringify(process.env.npm_package_version + Date.now()),
+        }),
+    ],
+    devtool: 'source-map',
+    // optimization: {
+    //     minimizer: [new TerserPlugin({
+    //         terserOptions: {
+    //             format: {
+    //                 preamble: `/* Copyright ${new Date().getUTCFullYear()}, Single Feather LLC. ${require(helpers.root('package.json')).name} ${require(helpers.root('package.json')).version} (${new Date().toUTCString()}) */`
+    //             }
+    //         }
+    //     })],
+    // }
 };

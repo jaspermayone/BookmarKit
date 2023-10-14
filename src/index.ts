@@ -1,3 +1,5 @@
+var packageJson = require("../package.json");
+
 function saveTabs() {
   chrome.identity.getProfileUserInfo(function(userInfo) {
     const userId = userInfo.id;
@@ -36,4 +38,11 @@ document.getElementById('retrieveTabs')!.addEventListener('click', function() {
       }
     });
   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const packageVersion = document.getElementById('packageVersion');
+  if (packageVersion) {
+    packageVersion.textContent = "Version: " + packageJson.version;
+  }
 });

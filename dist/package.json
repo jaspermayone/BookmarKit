@@ -5,17 +5,13 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --mode production --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode production --watch"
   },
   "keywords": [],
-  "author": {
-    "name": "Single Feather LLC",
-    "email": "apps@singlefeather.com"
-  },
+  "author": "",
   "devDependencies": {
     "@types/chrome": "^0.0.193",
-    "@types/jquery": "^3.5.22",
+    "@types/jquery": "^3.5.21",
     "@types/node": "^20.8.6",
     "@types/webpack": "^5.28.3",
     "browser-sync": "^2.29.3",
@@ -24,11 +20,12 @@
     "copy-webpack-plugin": "^11.0.0",
     "declaration-bundler-webpack-plugin": "^1.0.3",
     "terser-webpack-plugin": "^5.3.9",
-    "ts-loader": "^9.5.0",
+    "ts-loader": "^9.4.4",
     "typescript": "^4.9.5",
-    "webpack": "^5.89.0",
+    "webpack": "^5.88.2",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "wepack-cli": "0.0.1-security"
   },
   "dependencies": {
     "@types/lodash": "^4.14.199",
